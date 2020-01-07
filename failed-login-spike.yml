@@ -1,6 +1,7 @@
 filter:
-  - query:
-      [event][code]: 4625
+- query:
+    query_string:
+        query: (winlog.channel:"Microsoft\-Windows\-Windows Defender\/Operational" AND event.code:(1006 OR 1007 OR 1008 OR 1015 OR 1116 OR 1117 OR 1118 OR 1119 OR 1120) AND NOT (winlog.event_data.Category\ Name:"Potentially\ Unwanted\ Software"))
 type: frequency
 num_events: 5
 timeframe:
