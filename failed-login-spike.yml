@@ -5,4 +5,5 @@ type: frequency
 num_events: 5
 timeframe:
   hours: 1
+index: logstash-windows-*
 query_key: winlog.event_data.TargetUserName
