@@ -1,6 +1,6 @@
 filter:
-  - term:
-      event.code: 4625
+  - query:
+      [event][code]: 4625
 type: frequency
 num_events: 5
 timeframe:
