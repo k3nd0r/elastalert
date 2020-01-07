@@ -1,0 +1,8 @@
+filter:
+  - term:
+      event.code: 4625
+type: frequency
+num_events: 5
+timeframe:
+  hours: 1
+query_key: winlog.event_data.TargetUserName
