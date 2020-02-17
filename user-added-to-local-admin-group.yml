@@ -7,7 +7,7 @@ description: This rule triggers on user accounts that are added to the local Adm
 filter:
 - query:
     query_string:
-      query: (winlog.channel:"Security" AND (winlog.event_id:"4732" AND winlog.channel:"Security" AND (winlog.event_data.TargetUserName:"Administrators" OR winlog.event_data.TargetSid:"S\-1\-5\-32\-544"))))
+      query: (winlog.channel:"Security" AND (winlog.event_id:"4732" AND winlog.channel:"Security" AND (winlog.event_data.TargetUserName:"Administrators" OR winlog.event_data.TargetSid:"S\-1\-5\-32\-544")))
 index: logstash-windows-workstation-*
 name: User Added to Local Admin Group
 priority: 3
